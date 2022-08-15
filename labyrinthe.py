@@ -44,6 +44,7 @@ rejouerR = rejouer.get_rect(center=(275,400))
 bouton = rejouerR.inflate(15,15)
 bouton.center = (275,400)
 
+quitter = False
 fini = False
 
 def afficher_jeu():
@@ -66,11 +67,12 @@ def afficher_menu():
 
 afficher_jeu()
 
-while True:
+while not quitter:
     for evenement in event.get(): 
         # quitter
         if evenement.type == QUIT:
-            quit()
+            quitter = True
+            break
         # bouger pikachu
         if evenement.type == KEYDOWN:
             if evenement.key == K_RIGHT:
@@ -106,3 +108,5 @@ while True:
         afficher_menu()
         
     display.update()
+    
+quit()
