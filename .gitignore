@@ -1,0 +1,7 @@
+.replit
+replit.nix
+.DS_Store
+venv
+.config
+poetry.lock
+pyproject.toml
