@@ -4,4 +4,3 @@ replit.nix
 venv
 .config
 poetry.lock
-pyproject.toml

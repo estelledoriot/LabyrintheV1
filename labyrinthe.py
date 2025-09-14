@@ -1,3 +1,8 @@
+"""Estelle Doriot
+Labyrinthe avec Pygame
+Pikachu doit atteindre la pokéball sans toucher les murs du labyrinthe.
+"""
+
 import pygame
 
 pygame.init()
@@ -59,10 +64,7 @@ def afficher_menu():
     fenetre.fill(blanc)
     fenetre.blit(gagne, gagneR)
     pos = pygame.mouse.get_pos()
-    if bouton.collidepoint(pos):
-        couleur = bleu
-    else:
-        couleur = noir
+    couleur = bleu if bouton.collidepoint(pos) else noir
     rejouer = police2.render("Rejouer", True, couleur)
     pygame.draw.rect(fenetre, couleur, bouton, 1)
     fenetre.blit(rejouer, rejouerR)
